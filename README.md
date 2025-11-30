@@ -1,22 +1,21 @@
-# The 2022 Dataset of Butterfly Mimics
+# Butterfly Classification Analysis
 
-[YOYMimics-2022-dataset.pdf](YOYMimics-2022-dataset.pdf)
+This notebook analyzes butterfly species classification using deep learning embeddings and clustering techniques.
 
-This 2022 version of the dataset has two variations:
+## Overview
 
-An abbreviated `tiny` dataset for image classification of just 2 species with an accompanying
- [tiny dataset document](tiny/2022-Dataset-of-Butterfly-Mimics--Tiny.pdf).
+The analysis includes:
+- **Embeddings Generation**: Histogram-based and deep learning embeddings using EfficientNet-B0
+- **Dimensionality Reduction**: t-SNE and PCA visualization of embedding spaces
+- **Classification**: KNN and XGBoost classifiers trained on butterfly species
+- **Clustering**: K-means and hierarchical clustering with ARI score evaluation
 
-![Images of Monarch and Viceroy butterflies from tiny dataset](DocResources/the-monarchs-and-viceroys.png)
+## Dataset
 
-And, a full `data` version for classification of 6 butterfly species with its own accompanying [dataset document](data/2022-Dataset-of-Butterfly-Mimics.pdf).
+The dataset contains 6 butterfly species with attributes like mimicry status, palatability, and detailed notes. Data is sourced from the [Butterfly Mimics 2022 dataset](https://www.kaggle.com/datasets/keithpinson/butterfly-mimics-2022).
 
-![Images of Black, Monarch, Pipevine, Spicebush, Tiger and Viceroy butterflies from the dataset](DocResources/the-butterflies.png)
+## Key Results
 
-## To Download the Dataset
-
-The [Github repository](https://github.com/KeithPinson/butterfly_mimics_2022_dataset) contains everything but the images in the dataset. They full dataset with images is hosted on Kaggle. Follow the link to download the complete dataset, https://www.kaggle.com/datasets/keithpinson/butterfly-mimics-2022.
-
-## License
-
-[CC BY-NC 4.0](LICENSE)
+- Compares model performance on full vs. reduced embeddings
+- Evaluates clustering quality against ground truth labels
+- Provides visualization of classification and clustering results
